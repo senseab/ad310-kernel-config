@@ -32,18 +32,18 @@
 			status = "okay";
 		};
 
-        /* FORESEE NCFSES78-08G */
-        mmc2: mmc@01c11000 {
-            pinctrl-names = "default";
+		/* FORESEE NCFSES78-08G */
+		mmc2: mmc@01c11000 {
+		pinctrl-names = "default";
 			pinctrl-0 = <&mmc2_pins_a>;
 			vmmc-supply = <&reg_vcc3v3>;
 			bus-width = <4>;
 			/* cd-gpios = <&pio 2 24 0>; */ /* PC24 */
 			/* cd-inverted; */
-            non-removable;
-            /*broken-cd;*/
+			non-removable;
+			/*broken-cd;*/
 			status = "okay";
-        };
+		};
 
 		pio: pinctrl@01c20800 {
 			mmc0_cd_pin_m9: mmc0_cd_pin@0 {
@@ -53,13 +53,13 @@
 				allwinner,pull = <1>;
 			};
 
-            mmc2_pins_a: mmc2@0 {
+			mmc2_pins_a: mmc2@0 {
 				allwinner,pins = "PC6","PC7","PC8","PC9","PC10";
-                                /* "PC11","PC12","PC13","PC14","PC15"; */
-                allwinner,function = "mmc2";
-                allwinner,drive = <2>;
-                allwinner,pull = <0>;
-            };
+						/* "PC11","PC12","PC13","PC14","PC15"; */
+				allwinner,function = "mmc2";
+				allwinner,drive = <2>;
+				allwinner,pull = <0>;
+			};
 		};
 
 		uart0: serial@01c28000 {
