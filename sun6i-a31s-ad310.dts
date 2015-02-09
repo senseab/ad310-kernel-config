@@ -34,7 +34,7 @@
 
 		/* FORESEE NCFSES78-08G */
 		mmc2: mmc@01c11000 {
-		pinctrl-names = "default";
+			pinctrl-names = "default";
 			pinctrl-0 = <&mmc2_pins_a>;
 			vmmc-supply = <&reg_vcc3v3>;
 			bus-width = <4>;
