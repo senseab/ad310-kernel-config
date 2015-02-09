@@ -35,11 +35,13 @@
         /* FORESEE NCFSES78-08G */
         mmc2: mmc@01c11000 {
             pinctrl-names = "default";
-			pinctrl-0 = <&mmc2_pins_a>, <&mmc2_cd_pin_m9>;
+			pinctrl-0 = <&mmc2_pins_a>;
 			vmmc-supply = <&reg_vcc3v3>;
 			bus-width = <4>;
-			cd-gpios = <&pio 2 24 0>; /* PC24 */
-			cd-inverted;
+			/* cd-gpios = <&pio 2 24 0>; */ /* PC24 */
+			/* cd-inverted; */
+            non-removable;
+            /*broken-cd;*/
 			status = "okay";
         };
 
@@ -53,18 +55,11 @@
 
             mmc2_pins_a: mmc2@0 {
 				allwinner,pins = "PC6","PC7","PC8","PC9","PC10";
+                                /* "PC11","PC12","PC13","PC14","PC15"; */
                 allwinner,function = "mmc2";
                 allwinner,drive = <2>;
                 allwinner,pull = <0>;
             };
-
-            mmc2_cd_pin_m9: mmc2_cd_pin@0{
-                allwinner,pins = "PC24";
-				allwinner,function = "gpio_in";
-				allwinner,drive = <0>;
-				allwinner,pull = <1>;
-            };
-
 		};
 
 		uart0: serial@01c28000 {
