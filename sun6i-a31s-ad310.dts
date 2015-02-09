@@ -45,6 +45,15 @@
 			status = "okay";
 		};
 
+		ahci: sata@01c18000 {
+			compatible = "allwinner,sun4i-a10-ahci";
+			reg = <0x01c18000 0x1000>;
+			interrupts = <0 56 4>;
+			clocks = <&pll6 0>, <&ahb1_gates 0>;
+			target-supply = <&reg_ahci_5v>;
+			status = "okay";
+		};
+
 		pio: pinctrl@01c20800 {
 			mmc0_cd_pin_m9: mmc0_cd_pin@0 {
 				allwinner,pins = "PH22";
@@ -60,6 +69,7 @@
 				allwinner,drive = <2>;
 				allwinner,pull = <0>;
 			};
+                        
 		};
 
 		uart0: serial@01c28000 {
