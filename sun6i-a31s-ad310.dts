@@ -405,7 +405,7 @@
 			clock-names = "usb0_phy", "usb1_phy", "usb2_phy";
 			resets = <0x1a 0x0 0x1a 0x1 0x1a 0x2>;
 			reset-names = "usb0_reset", "usb1_reset", "usb2_reset";
-			status = "disabled";
+			status = "okay";
 			#phy-cells = <0x1>;
 			linux,phandle = <0x1b>;
 			phandle = <0x1b>;
@@ -951,7 +951,7 @@
 		regulator-max-microvolt = <0x4c4b40>;
 		enable-active-high;
 		gpio = <0x15 0x7 0x6 0x0>;
-		status = "disabled";
+		status = "okay";
 	};
 
 	usb2-vbus {
@@ -963,7 +963,7 @@
 		regulator-max-microvolt = <0x4c4b40>;
 		enable-active-high;
 		gpio = <0x15 0x7 0x3 0x0>;
-		status = "disabled";
+		status = "okay";
 	};
 
 	vcc3v0 {
