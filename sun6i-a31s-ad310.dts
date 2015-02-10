@@ -405,7 +405,7 @@
 			clock-names = "usb0_phy", "usb1_phy", "usb2_phy";
 			resets = <0x1a 0x0 0x1a 0x1 0x1a 0x2>;
 			reset-names = "usb0_reset", "usb1_reset", "usb2_reset";
-			status = "disabled";
+			status = "okay";
 			#phy-cells = <0x1>;
 			linux,phandle = <0x1b>;
 			phandle = <0x1b>;
@@ -419,7 +419,7 @@
 			resets = <0x10 0x1a>;
 			phys = <0x1b 0x1>;
 			phy-names = "usb";
-			status = "disabled";
+			status = "okay";
 		};
 
 		usb@01c1a400 {
@@ -430,7 +430,7 @@
 			resets = <0x10 0x1d>;
 			phys = <0x1b 0x1>;
 			phy-names = "usb";
-			status = "disabled";
+			status = "okay";
 		};
 
 		usb@01c1b000 {
@@ -441,7 +441,7 @@
 			resets = <0x10 0x1b>;
 			phys = <0x1b 0x2>;
 			phy-names = "usb";
-			status = "disabled";
+			status = "okay";
 		};
 
 		usb@01c1b400 {
@@ -452,7 +452,7 @@
 			resets = <0x10 0x1e>;
 			phys = <0x1b 0x2>;
 			phy-names = "usb";
-			status = "disabled";
+			status = "okay";
 		};
 
 		usb@01c1c400 {
@@ -461,7 +461,7 @@
 			interrupts = <0x0 0x4d 0x4>;
 			clocks = <0xf 0x1f 0x1a 0x12>;
 			resets = <0x10 0x1f>;
-			status = "disabled";
+			status = "okay";
 		};
 
 		pinctrl@01c20800 {
@@ -753,7 +753,7 @@
 			snps,pbl = <0x2>;
 			snps,fixed-burst;
 			snps,force_sf_dma_mode;
-			status = "disabled";
+			status = "okay";
 			#address-cells = <0x1>;
 			#size-cells = <0x0>;
 		};
@@ -925,7 +925,7 @@
 		regulator-max-microvolt = <0x4c4b40>;
 		enable-active-high;
 		gpio = <0x15 0x1 0x8 0x0>;
-		status = "disabled";
+		status = "okay";
 		linux,phandle = <0x2b>;
 		phandle = <0x2b>;
 	};
@@ -939,7 +939,7 @@
 		regulator-max-microvolt = <0x4c4b40>;
 		enable-active-high;
 		gpio = <0x15 0x7 0x6 0x0>;
-		status = "disabled";
+		status = "okay";
 	};
 
 	usb2-vbus {
@@ -951,7 +951,7 @@
 		regulator-max-microvolt = <0x4c4b40>;
 		enable-active-high;
 		gpio = <0x15 0x7 0x3 0x0>;
-		status = "disabled";
+		status = "okay";
 	};
 
 	vcc3v0 {
