@@ -130,7 +130,7 @@
 			
 			port {
 				hdmi_out: endpoint {
-					remote-endpoint = ;
+					remote-endpoint = <0>;
 				};
 			};
 
