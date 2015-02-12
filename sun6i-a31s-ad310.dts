@@ -127,14 +127,7 @@
 		hdmi: hdmi@01c16000 {
 			compatible = "hdmi-connector";
 			type = "a";
-			
-			port {
-				hdmi_out: endpoint {
-					remote-endpoint = <0>;
-				};
-			};
-
-			status = "disabled";
+			status = "okay";
 		};
 	};
 
