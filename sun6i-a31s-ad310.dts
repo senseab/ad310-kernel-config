@@ -82,7 +82,7 @@
                 allwinner,function = "gpio_out";
                 allwinner,drive = <0>;
                 allwinner,pull = <0>;
-            }
+            };
 */						
 		};
 
@@ -90,13 +90,13 @@
 		gmac: ethernet@01c30000 {
 			pinctrl-names = "default";
 			pinctrl-0 = <&gmac_pins_mii_a>;
-			phy = <&phy1>;
+			/*phy = <&phy0>;*/
 			phy-mode = "mii";
 			status = "okay";
-			
-			phy1: ethernet-phy@1{
-				reg = <1>;
-			};
+			/*
+			phy0: ethernet-phy@0{
+				reg = <0>;
+			};*/
 		};
 
 		uart0: serial@01c28000 {
