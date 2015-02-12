@@ -22,7 +22,7 @@
 	};
 
 	aliases {
-		display0 = &hdmi;
+		/* display0 = &hdmi; */
 	};
 
 	soc@01c00000 {
@@ -71,24 +71,31 @@
 			};
 
 			led_pins_ad310: led_pins@0{
-				allwinner,pins = "PH20", "PH21";
+				allwinner,pins = "PH13";
 				allwinner,function = "gpio_out";
 				allwinner,drive = <0>;
 				allwinner.pull = <0>;
 			};
-						
+/*
+            usb1_vbus_pin_ad310: usb1_vbus_pin@0{
+                allwinner,pins = "PC27";
+                allwinner,function = "gpio_out";
+                allwinner,drive = <0>;
+                allwinner,pull = <0>;
+            }
+*/						
 		};
 
 		/* REALTAK RTL8201CP */
 		gmac: ethernet@01c30000 {
 			pinctrl-names = "default";
 			pinctrl-0 = <&gmac_pins_mii_a>;
-			phy = <&phy0>;
+			phy = <&phy1>;
 			phy-mode = "mii";
 			status = "okay";
 			
-			phy0: ethernet-phy@0{
-				reg = <0>;
+			phy1: ethernet-phy@1{
+				reg = <1>;
 			};
 		};
 
@@ -123,12 +130,6 @@
 		ohci2: usb@01c1c400 {
 			status = "okay";
 		};
-		
-		hdmi: hdmi@01c16000 {
-			compatible = "hdmi-connector";
-			type = "a";
-			status = "okay";
-		};
 	};
 
 	leds {
@@ -136,20 +137,11 @@
 		pinctrl-names = "default";
 		pinctrl-0 = <&led_pins_ad310>;
 
-		red {
-			label = "ad310:red:usr";
-			gpios = <&pio 7 20 0>;
-		};
-
 		blue {
 			label = "ad310:blue:usr";
-			gpios = <&pio 7 21 0>;
+			gpios = <&pio 7 13 0>;
 			default-state = "on";
 		};
-	};
-
-	reg_ahci_5v: ahci-5v {
-		status = "okay";
 	};
 
 	reg_usb1_vbus: usb1-vbus {
